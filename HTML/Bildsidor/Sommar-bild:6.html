@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sommar-bild| QuickMenu</title>
+  <link rel="stylesheet" href="../../CSS/Hem.css">
+</head>
+<body>
+
+ <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <h1>Sommar</h1>
+  </header>
+
+  <div>
+  <nav>
+    <ul class="horizontal-menu">
+      <li><a href="Hem.html">Hem</a></li>
+      <li><a href="Ommig.html">Om mig</a></li>
+      <li class="dropdown">
+        <a href="Projekt.html" class="dropbtn">Projekt</a>
+        <ul class="dropdown-content">
+          <li><a href="Vinter.html">Vinter</a></li>
+          <li><a href="Vår.html">Vår</a></li>
+          <li><a href="Sommar.html">Sommar</a></li>
+          <li> <a href="Höst.html">Höst</a></li>
+          <li><a href="Överigt.html">Överigt</a></li>
+        </ul>
+      </li>
+      <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+<div class="product-box">
+  <div class="product-info">
+    <h2>porträttserie av dahlior</h2>
+    <p class="description">
+     En mini serie av dahlior.
+    Stor storlek: 18x12 och lilla storleken: 9x12</p> 
+
+<a href="../Kontakt.html" class="buy-btn">Kontakta för köp</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="../../Pictures/Sommar/d892c74c-1280-4a17-86b0-cb7a35f97bbb.jpeg"alt="färgglad målning" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+        <img src="../../Pictures/Sommar/2353ee05-7549-4906-90ce-48396d2fcd34.jpeg" alt="" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="../../Pictures/Sommar/76f397e3-3007-41ee-8715-0909e553b540.jpeg" alt="" onclick="myFunction(this);">
+    </div>
+     <div class="column">
+        <img src="../../Pictures/Sommar/92dcccf7-eff5-4adb-a0f5-a146e54d21ae.jpeg" alt="" onclick="myFunction(this);">
+    </div>
+     <div class="column">
+        <img src="../../Pictures/Sommar/9744abfc-7c79-4619-ac3f-1b8b0ff570d5.jpeg" alt="" onclick="myFunction(this);">
+    </div>
+     <div class="column">
+        <img src="../../Pictures/Sommar/53f336f7-5d61-425e-b8e0-bf23608fa83b.jpeg" alt="" onclick="myFunction(this);">
+    </div>
+</div>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Made by Manta. Alla rättigheter förbehahållna.</p>
+    </footer>
+    <script src="../../JAVA file/Java.js"></script>
+     <script> window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });</script>
+
+    </body>
+</html>
