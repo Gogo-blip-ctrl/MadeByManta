@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Sökresultat</title>
+  <link rel="stylesheet" href="Hem.css">
+</head>
+<body>
+  <nav>
+    
+    <form id="searchForm" class="search-bar">
+      <input type="text" id="searchInput" placeholder="Sök...">
+      <button type="submit">
+        <img src="../Pictures/download..png" alt="Sök ikon">
+      </button>
+    </form>
+  </nav>
+
+  <main>
+    <h1>Sökresultat</h1>
+    <div id="search-results"></div>
+  </main>
+
+  <script src="../JAVA file/Java.js"></script>
+  <script>
+    // Läs det användaren sökte på
+    const resultsContainer = document.getElementById('search-results');
+    const query = localStorage.getItem('searchQuery');
+
+    if (query) {
+      // 🔸 Här lägger vi in alla "poster" du vill kunna söka i
+      const galleryItems = [
+        { title: 'Vinter', url: 'vinter.html' },
+        { title: 'Sommar', url: 'sommar.html' },
+        { title: 'Höst', url: 'host.html' },
+        { title: 'Vår', url: 'var.html' },
+        { title: 'Övrigt', url: 'overigt.html' },
+      ];
+
+      // 🔸 Filtrera ut de som matchar sökningen
+      const filtered = galleryItems.filter(item =>
+        item.title.toLowerCase().includes(query.toLowerCase())
+      );
+
+      if (filtered.length > 0) {
+        filtered.forEach(item => {
+          const link = document.createElement('a');
+          link.href = item.url;
+          link.textContent = item.title;
+          link.classList.add('result-link');
+          resultsContainer.appendChild(link);
+        });
+      } else {
+        resultsContainer.innerHTML = `<p>Inga resultat för "${query}"</p>`;
+      }
+    } else {
+      resultsContainer.innerHTML = `<p>Inget sökord angivet</p>`;
+    }
+  </script>
+</body>
+</html>

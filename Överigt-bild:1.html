@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Överigt| QuickMenu</title>
+  <link rel="stylesheet" href="../../CSS/Hem.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <h1>Överigt</h1>
+  </header>
+
+  <div>
+  <nav>
+    <ul class="horizontal-menu">
+      <li><a href="Hem.html">Hem</a></li>
+      <li><a href="Ommig.html">Om mig</a></li>
+      <li class="dropdown">
+        <a href="Projekt.html" class="dropbtn">Projekt</a>
+        <ul class="dropdown-content">
+          <li><a href="Vinter.html">Vinter</a></li>
+          <li><a href="Vår.html">Vår</a></li>
+          <li><a href="Sommar.html">Sommar</a></li>
+          <li> <a href="Höst.html">Höst</a></li>
+          <li><a href="Överigt.html">Överigt</a></li>
+        </ul>
+      </li>
+      <li><a href="Kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+<div class="product-box">
+  <div class="product-info">
+    <h2>Huset med grönska</h2>
+    <p class="description">
+      En tavla med ett litet hus vid sidan av vägen med grönska runt omkring sig.</p>
+
+<a href="../Kontakt.html" class="buy-btn">Kontakta för köp</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="../../Pictures/Överigt/1000009104.jpeg"alt="Ett hus med grönska" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+        <img src="../../Pictures/Överigt/1000009106.jpeg" alt="" onclick="myFunction(this);">
+    </div>
+</div>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Made by Manta. Alla rättigheter förbehahållna.</p>
+    </footer>
+    <script src="../../JAVA file/Java.js"></script>
+     <script> window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });</script>
+
+    </body>
+</html>

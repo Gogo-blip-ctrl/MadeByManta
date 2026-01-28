@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | QuickMenu</title>
+  <link rel="stylesheet" href="../CSS/Hem.css">
+</head>
+<body>
+
+ <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+
+  <div>
+  <nav>
+    <ul class="horizontal-menu">
+      <li><a href="Hem.html">Hem</a></li>
+      <li><a href="Ommig.html">Om mig</a></li>
+      <li class="dropdown">
+        <a href="Projekt.html" class="dropbtn">Projekt</a>
+        <ul class="dropdown-content">
+          <li><a href="Vinter.html">Vinter</a></li>
+          <li><a href="Vår.html">Vår</a></li>
+          <li><a href="Sommar.html">Sommar</a></li>
+          <li> <a href="Höst.html">Höst</a></li>
+          <li><a href="Överigt.html">Överigt</a></li>
+        </ul>
+      </li>
+      <li><a href="Kontakt.html">Kontakt</a></li>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <main>
+
+  <section class="contact-section">
+    <form id="regForm" action="https://formspree.io/f/mnnglwkj" method="POST">
+      
+      <div class="tab">Namn:
+        <p><input name="firstName" placeholder="First name..." oninput="this.className = ''" required></p>
+        <p><input name="lastName" placeholder="Last name..." oninput="this.className = ''" required></p>
+      </div>
+
+      <div class="tab">Kontakt Info:
+        <p><input type="email" name="email" placeholder="E-mail..." oninput="this.className = ''" required></p>
+        <p><input type="tel" name="phone" placeholder="Phone..." oninput="this.className = ''"></p>
+      </div>
+
+      <div class="tab">Tavla info:
+        <p><input name="artTitle" placeholder="Vilken tavla" oninput="this.className = ''" required></p>
+        <p><input name="priceSuggestion" placeholder="Pris förslag" oninput="this.className = ''"></p>
+        <p><input name="other" placeholder="Övrigt" oninput="this.className = ''"></p>
+      </div>
+
+      <div style="overflow:auto;">
+        <div style="float:right;">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Made by Manta. Alla rättigheter förbehahållna.</p>
+  </footer>
+  <script src="../JAVA file/Java.js"></script>
+   <script> window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });</script>
+
+</body>
+</html>
